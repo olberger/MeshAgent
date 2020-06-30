@@ -16,7 +16,7 @@ limitations under the License.
 
 #include "linux_events.h"
 
-static const int g_keymapLen = 96; // Modify this when you change anything in g_keymap.
+static const int g_keymapLen = 98; // Modify this when you change anything in g_keymap.
 extern int change_display;
 x11tst_struct *x11tst_exports = NULL;
 
@@ -100,23 +100,25 @@ static struct keymap_t g_keymap[] = {
 	{ XK_Control_L,        VK_CONTROL },
 	{ XK_Control_R,        VK_CONTROL },
 	{ XK_Alt_L,            VK_MENU },
-	{ XK_Alt_R,            VK_MENU },
+       { XK_ISO_Level3_Shift, VK_RMENU },
 	{ XK_Super_L,          VK_LWIN },
 	{ XK_Super_R,          VK_RWIN },
 	{ XK_Menu,             VK_APPS },
 	{ XK_Kanji,            VK_KANJI },
 	{ XK_Kana_Shift,       VK_KANA },
-	{ XK_colon,			   VK_OEM_1 },
+       { XK_dollar,                       VK_OEM_1 },
 	{ XK_plus,		 	   VK_OEM_PLUS },
 	{ XK_comma,			   VK_OEM_COMMA },
 	{ XK_minus,		 	   VK_OEM_MINUS },
 	{ XK_period, 		   VK_OEM_PERIOD },
 	{ XK_slash, 	       VK_OEM_2  },
-	{ XK_grave, 		   VK_OEM_3 },
-	{ XK_bracketleft, 	   VK_OEM_4 },
-	{ XK_backslash,		   VK_OEM_5 },
-	{ XK_bracketright,	   VK_OEM_6 },
-	{ XK_apostrophe,	   VK_OEM_7 }
+        { XK_ugrave,               VK_OEM_3 },
+        { XK_parenright,           VK_OEM_4 },
+        { XK_asterisk,             VK_OEM_5 },
+        { XK_dead_circumflex,      VK_OEM_6 },
+        { XK_apostrophe,           VK_OEM_7 },
+        { XK_exclam,               VK_OEM_8 },
+        { XK_less,                 VK_OEM_102 }
 };
 
 void MouseAction(double absX, double absY, int button, short wheel, Display *display)
