@@ -12,12 +12,10 @@ MAINTAINER Olivier Berger <olivier.berger@telecom-sudparis.eu>
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
+    sudo \
     git ca-certificates \
     make gcc libc6-dev \
     libx11-dev libxtst-dev libxext-dev libjpeg62-turbo-dev
-
-RUN apt-get install -y --no-install-recommends \
-    sudo
 
 # Defaults to be overruled by launch script (docker run ... -e USERID=1001 ...)
 ENV USER=meshbuilder

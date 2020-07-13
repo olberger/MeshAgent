@@ -9,7 +9,7 @@
 #
 # To build MeshAgent2 on Linux you first got to download the dev libraries to compile the agent, we need x11, txt, ext and jpeg. To install, do this:
 #	Using APT:
-#		sudo apt-get install libx11-dev libxtst-dev libxext-dev libjpeg62-dev
+#		sudo apt-get install libx11-dev libxtst-dev libxext-dev libjpeg62-turbo-dev
 #
 #	Using YUM:
 #		sudo yum install libX11-devel libXtst-devel libXext-devel libjpeg-devel
