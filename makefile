@@ -370,11 +370,11 @@ LINUXSSL =
 MACSSL =
 BSDSSL =
 else
-LINUXSSL = -Lopenssl/libstatic/linux/$(ARCHNAME)
+LINUXSSL = -L/usr/lib/$(ARCHNAME)-linux-gnu/
 MACSSL = -Lopenssl/libstatic/macos/$(ARCHNAME)
 BSDSSL = -Lopenssl/libstatic/bsd/$(ARCHNAME)
 CFLAGS += -DMICROSTACK_TLS_DETECT
-LDEXTRA += -lssl -lcrypto
+LDEXTRA += -l:libssl.a -l:libcrypto.a
 endif
 
 ifeq ($(DEBUG),1)
