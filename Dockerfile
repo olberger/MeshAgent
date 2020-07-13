@@ -11,7 +11,9 @@ MAINTAINER Olivier Berger <olivier.berger@telecom-sudparis.eu>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get upgrade -y
+
+RUN apt-get install -y --no-install-recommends \
     sudo \
     git ca-certificates \
     make gcc libc6-dev \
